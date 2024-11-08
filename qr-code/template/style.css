@@ -55,6 +55,9 @@ img{
 	height: 52px;
 	color: var(--slate-900);
 	margin: auto;
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
 }
 
 #message {
