@@ -70,8 +70,8 @@ img{
 
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 327px) {
 	body{
-		height: 812px;
+		height: 501px;
 	}
 }
