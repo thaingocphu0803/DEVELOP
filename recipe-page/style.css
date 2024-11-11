@@ -1,0 +1,135 @@
+:root {
+	--white: rgba(255, 255, 255, 1);
+	--stone-100: rgba(255, 222, 167, 1);
+	--stone-150: rgba(225, 204, 158, 1);
+	--stone-600: rgba(80, 68, 39, 1);
+	--stone-900: rgba(30, 18, 16, 1);
+	--Brown-800: rgba(82, 47, 31, 1);
+	--Rose-800: rgba(139, 69, 112, 1);
+	--Rose-50: rgba(255, 223, 227, 1);
+}
+
+@font-face {
+	font-family: "Young Serif";
+	src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Outfit";
+	src: url(./assets/fonts/outfit/static/Outfit-Regular.ttf);
+	font-weight: 400;
+}
+
+
+@font-face {
+	font-family: "Outfit";
+	src: url(./assets/fonts/outfit/static/Outfit-Bold.ttf);
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "Outfit";
+	src: url(./assets/fonts/outfit/static/Outfit-SemiBold.ttf);
+	font-weight: 600;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#container{
+	background-color: var(--stone-150);
+	display: grid;
+	align-items: center;
+	justify-content: center;
+		overflow: auto;
+}
+#card{
+	margin: 30px auto;
+	display: grid;
+	grid-template-rows: auto;
+	align-items: center;
+	width: 55%;
+	background-color: var(--white);
+	border-radius: 10px;
+	padding: 24px;
+	font-family: 'Outfit';
+	font-weight: lighter;
+	color: var(--stone-600);
+	overflow: auto;
+}
+img{
+	height: 250px;
+	width: 100%;
+	border-radius: 10px;
+}
+#img{
+	text-align: center;
+}
+h3{
+	color: var(--Brown-800);
+}
+table{
+	width: 100%;
+}
+h1{
+	font-family: "Young Serif";
+}
+h4{
+	color: var(--Rose-800);
+}
+#ul_prepair{
+	color: var(--stone-600);
+}
+#preparation{
+	background-color: var(--Rose-50);
+	border-radius: 10px;
+	padding: 20px;	
+}
+#ingredients, #instructor{
+	border-bottom: 1px solid var(--stone-600);
+	padding: 10px;
+}
+
+li{
+	margin: 10px 0;
+}
+
+#table{
+	display: grid;
+	grid-template-rows: auto;
+}
+
+.item{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	border-bottom: 1px solid var(--stone-600);
+}
+.header{
+	font-family: "Outfit";
+	padding-left: 30px;
+}
+
+.body{
+	font-family: "Outfit";
+	font-weight: 700;
+	color: var(--Brown-800);
+}
+
+@media screen and (max-width:375px) {
+	#card{
+		width: 100%;
+		margin: 0;
+		border-radius: 0;
+		padding: 0;
+	}
+
+	img{
+		border-radius: 0;
+	}
+
+	#mobile{
+		padding: 16px;
+	}
+}
