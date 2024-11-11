@@ -92,8 +92,9 @@ h4{
 	padding: 10px;
 }
 
-li{
-	margin: 10px 0;
+ul,ol{
+	padding-left: 0;
+	list-style-position: inside;
 }
 
 #table{
