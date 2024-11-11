@@ -102,11 +102,15 @@ ul,ol{
 	grid-template-rows: auto;
 }
 
-.item{
+.item, .last_item{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+}
+.item{
 	border-bottom: 1px solid var(--stone-600);
 }
+
+
 .header{
 	font-family: "Outfit";
 	padding-left: 30px;
