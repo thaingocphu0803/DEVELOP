@@ -45,21 +45,30 @@ submit.addEventListener("click", (event) => {
 	if (!validateInput()) return;
 
 	const form = document.getElementById('form');
+	form.classList.remove('show');
+	form.classList.add('hidden')
 
-	form.innerHTML =  `
-		<div id="complete">
-		  	<img src="./images/icon-complete.svg" alt="">
-			<h1>Thank you!</h1>
-    		<p>We've added your card details</p>
-			<button>Continue</button>
-  		</div>
-  	`;
+	const complete = document.getElementById('complete');
+	complete.classList.remove('hidden');
+	complete.classList.add('show')
+
 
 
 });
 
+document.getElementById("back").addEventListener('click', () => {
+	const form = document.getElementById('form');
+	const complete = document.getElementById('complete');
+
+	complete.classList.remove('show');
+	complete.classList.add('hidden')
+	form.classList.remove('hidden');
+	form.classList.add('show')
+})
+
+
 const validateInput = () => {
-    const namePattern = /^[a-zA-Z\s]{1,35}$/;
+    const namePattern = /^[a-zA-Z\s]{1,25}$/;
     const numberPattern = /^[0-9]{16}$/;
     const datePattern = /^[0-9]{1,2}$/;
     const cvcPattern = /^[0-9]{3}$/; 

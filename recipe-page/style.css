@@ -43,7 +43,7 @@
 	display: grid;
 	align-items: center;
 	justify-content: center;
-		overflow: auto;
+	overflow: auto;
 }
 #card{
 	margin: 30px auto;

@@ -31,8 +31,7 @@
 }
 
 
-#form {
-	display: grid;
+#form, #complete {
 	justify-content: stretch;
 	grid-template-columns: 30vw;
 	grid-template-rows: auto;
@@ -44,7 +43,6 @@
 	justify-content: end;
 	grid-template-columns: 30vw;
 	grid-template-rows: repeat(2, 20vh);
-	/* margin-right: 4em; */
 	gap: 30px;
 }
 
@@ -63,9 +61,11 @@
 	gap: auto;
 	align-items: center;
 	padding: 10px;
-	margin-left: 3vw;
+	bottom: 10px;
+	top: 10em;
+	left: 10em;
+	position: fixed;
 
-	
 }
 
 #card_black{
@@ -73,8 +73,9 @@
 	grid-auto-rows: auto;
 	grid-template-columns: 1fr 5fr 1fr;
 	align-items: center;
-	margin-left: 8vw;
-
+	top: 22em;
+	left: 17em;
+	position: fixed;
 }
 
 #card_cvc{
@@ -124,13 +125,18 @@ button{
 	color: var(--white);
 }
 h1{
-	color: var(--very-dark-violet)
+	color: var(--very-dark-violet);
+	margin: 0;
 }
 
 #complete{
-	display: grid;
 	align-items: center;
-	justify-content: center;
+	text-align: center;
+	
+}
+
+#img{
+	text-align: center;
 }
 
 button:hover{
@@ -141,6 +147,48 @@ button:hover{
 	color: var(--red);
 }
 
-@media screen and (max-width: 375px) {
-	
+.hidden{
+	display: none;
+}
+
+.show{
+	display: grid;
+}
+
+@media screen and (max-width: 400px) {
+	#container{
+		display: grid;
+		grid-template-rows:  auto;
+		grid-template-columns: 100%;
+		width: auto;
+		background-image: url(./images/bg-main-mobile.png);
+	}
+	#form{
+		grid-template-columns: 100%;
+		max-width: 375px;
+		color: var(--very-dark-violet);
+	}
+
+	#card_font{
+		top:8em;
+		left: 1.3em;
+		width: 250px;
+		height: 150px;
+		z-index: 1;
+	}
+
+	#card_black{
+		top:1em;
+		left: 6em;
+		width: 250px;
+		height: 150px;
+
+	}
+	#logo{
+		width: 42px;
+		height: 27px;
+	}
+	#card_number, #output_month, #output_name, #output_year{
+		font-size: 16px;
+	}
 }
