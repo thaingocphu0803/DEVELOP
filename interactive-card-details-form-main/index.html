@@ -2,47 +2,98 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css" />
 
   <title>Frontend Mentor | Interactive card details form</title>
 </head>
 
 <body>
-
   <div id="container">
+    <div id="card">
+      <div id="card_font">
+        <img src="./images/card-logo.svg" alt="">
+        <p id="card_number">0000 0000 0000 0000</p>
+        <div class="detail">
+          <span id="output_name">Jane Appleseed</span>
+          <div>
+            <span id="output_month">00</span>/<span id="output_year">00</span>
+          </div>
+        </div>
+      </div>
+      <div id="card_black">
+        <p id="card_cvc">000</p>
+      </div>
 
+
+    </div>
+    <form id="form">
+
+      <div class="input-form">
+        <label for="name">Cardholder Name</label>
+        <input 
+          type="text" id="name" name="name" 
+          placeholder="e.g. Jane Appleseed"  
+          maxlength="35"
+        />
+        <span class="error" id="error_name"></span>
+      </div>
+
+      <div class="input-form">
+        <label for="number">Card Number</label>
+        <input 
+          type="text" id="number" name="number"
+          placeholder="e.g. 1234 5678 9123 0000" 
+          maxlength="16"
+          minlength="16"
+        />
+
+        <span class="error" id="error_number"></span>
+
+      </div>
+
+      <div class="card-detail">
+
+        <div class="input-form">
+          <label> Exp. Date (MM/YY)</label>
+          <div class="exp-date">
+            <input 
+              type="text" id="month" 
+              name="month" placeholder="MM"
+              maxlength="2"
+            />
+
+            <input 
+              type="text" id="year" 
+              name="year" placeholder="YY" 
+              maxlength="2"
+            />
+
+          </div>
+          <span class="error" id="error_date"></span>
+        </div>
+
+        <div class="input-form">
+          <label for="cvc">CVC</label>
+          <input 
+            type="text" id="cvc" 
+            name="cvc" placeholder="e.g. 123"
+            maxlength="3"
+          />
+          <span class="error" id="error_cvc"></span>
+        </div>
+
+      </div>
+
+      <button id="submit">Confirm</button>
+    </form>
   </div>
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
 
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
+  <script src="app.js" defer></script>
 </body>
 
 </html>

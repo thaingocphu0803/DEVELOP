@@ -1,25 +1,145 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
-:root{
-	--linear-gradient: hsl(249, 99, 64);
-	--red: hsl(0, 100, 66);
-	--white: hsl(0, 0, 100);
-	--light-grayish-violet: hsl(279, 6, 55);
-	--very-dark-violet: hsl(278,68, 11);
-}
+:root {
+	--linear-gradient: rgb(121, 36, 211);
+	--red: rgb(255, 77, 77);
+	--white: rgb(255, 255, 255);
+	--light-grayish-violet: rgb(126, 115, 153);
+	--very-dark-violet: rgb(52, 8, 43);
+  }
+  
 
-body{
-	font-family: 'Space Grotesk';
-	font-size: 18px;
-	width: 1440px;
-	height: 960px;
-}
+
 
 * {
 	box-sizing: border-box;
 }
 
+#container{
+	display: grid;
+	grid-template-columns: repeat(2,50%);
+	align-items: center;
+	font-family: 'Space Grotesk';
+	font-size: 18px;
+	width: 1440px;
+	height: 960px;
+	background-color: var(--white);
+	background-image: url(./images/bg-main-desktop.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: var(--light-grayish-violet);
+}
 
+
+#form {
+	display: grid;
+	justify-content: stretch;
+	grid-template-columns: 30vw;
+	grid-template-rows: auto;
+	gap: 16px;
+}
+
+#card{
+	display: grid;
+	justify-content: end;
+	grid-template-columns: 30vw;
+	grid-template-rows: repeat(2, 20vh);
+	/* margin-right: 4em; */
+	gap: 30px;
+}
+
+#card_font, #card_black{
+	border-radius: 10px;
+	display: grid;
+	background-size: cover;
+	width: 360px;
+	height: 190px;
+}
+
+#card_font{
+	background-image: url(./images/bg-card-front.png);
+	color: var(--white);
+	grid-template-columns: auto;
+	gap: auto;
+	align-items: center;
+	padding: 10px;
+	margin-left: 3vw;
+
+	
+}
+
+#card_black{
+	background-image: url(./images/bg-card-back.png);
+	grid-auto-rows: auto;
+	grid-template-columns: 1fr 5fr 1fr;
+	align-items: center;
+	margin-left: 8vw;
+
+}
+
+#card_cvc{
+	grid-column:  2/3;
+	text-align: end;
+	color: var(--white);
+}
+
+
+#card_number{
+	text-align: center;
+	padding: 0 10%;
+	font-size: 24px;
+}
+.detail{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+.input-form{
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	gap: 10px;
+}
+
+.card-detail, .exp-date{
+	display: grid;
+	grid-template-columns: repeat(2, 48%);
+	justify-content: space-between;
+}
+
+input, button{
+	padding: 16px;
+	border-radius: 10px;
+	border: 1px solid var(--light-grayish-violet);
+}
+
+input:focus{
+	outline: 1px solid var(--linear-gradient);
+}
+
+button{
+	background-color: var(--very-dark-violet);
+	color: var(--white);
+}
+h1{
+	color: var(--very-dark-violet)
+}
+
+#complete{
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+
+button:hover{
+	background-color: var(--light-grayish-violet);
+}
+
+.error{
+	color: var(--red);
+}
 
 @media screen and (max-width: 375px) {
 	
