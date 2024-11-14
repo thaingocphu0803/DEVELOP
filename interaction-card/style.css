@@ -31,7 +31,7 @@
 }
 
 
-#form, #complete {
+#form {
 	justify-content: stretch;
 	grid-template-columns: 30vw;
 	grid-template-rows: auto;
@@ -39,10 +39,10 @@
 }
 
 #card{
+	justify-content: stretch;
 	display: grid;
-	justify-content: end;
-	grid-template-columns: 30vw;
-	grid-template-rows: repeat(2, 20vh);
+	grid-template-columns: 1fr 10fr 1fr;
+	grid-template-rows: repeat(2, 1fr);
 	gap: 30px;
 }
 
@@ -61,11 +61,9 @@
 	gap: auto;
 	align-items: center;
 	padding: 10px;
-	bottom: 10px;
-	top: 10em;
-	left: 10em;
-	position: fixed;
-
+	grid-column: 2/3;
+	grid-row: 1/2;
+	justify-self: center;
 }
 
 #card_black{
@@ -73,9 +71,10 @@
 	grid-auto-rows: auto;
 	grid-template-columns: 1fr 5fr 1fr;
 	align-items: center;
-	top: 22em;
-	left: 17em;
-	position: fixed;
+	grid-column: 2/3;
+	grid-row: 2/3;
+	justify-self: end;
+
 }
 
 #card_cvc{
@@ -93,6 +92,7 @@
 .detail{
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 
@@ -132,6 +132,7 @@ h1{
 #complete{
 	align-items: center;
 	text-align: center;
+	gap: 16px;
 	
 }
 
@@ -158,30 +159,47 @@ button:hover{
 @media screen and (max-width: 400px) {
 	#container{
 		display: grid;
-		grid-template-rows:  auto;
+		grid-template-rows: 1fr 2fr;
 		grid-template-columns: 100%;
 		width: auto;
 		background-image: url(./images/bg-main-mobile.png);
+		background-size:contain;
+		align-items: start;
+		justify-content: center;
+		gap: 1em;
+		width: 375px;
+		overflow: hidden;
 	}
 	#form{
 		grid-template-columns: 100%;
 		max-width: 375px;
 		color: var(--very-dark-violet);
+		font-size: 14px;
+		padding: 2em;
+	}
+
+	#card{
+		grid-template-rows: 20vh;
+		grid-template-columns: 1fr 16fr 1fr;
+		gap: 0;
+		margin-top: 1em	;
 	}
 
 	#card_font{
-		top:8em;
-		left: 1.3em;
-		width: 250px;
+		width: 260px;
 		height: 150px;
 		z-index: 1;
+		grid-column: 2/3;
+		grid-row: 2/3;
+		justify-self: start;
+	
 	}
 
 	#card_black{
-		top:1em;
-		left: 6em;
-		width: 250px;
+		width: 260px;
 		height: 150px;
+		grid-column: 2/3;
+		grid-row: 1/2;
 
 	}
 	#logo{
@@ -189,6 +207,6 @@ button:hover{
 		height: 27px;
 	}
 	#card_number, #output_month, #output_name, #output_year{
-		font-size: 16px;
+		font-size: 13px;
 	}
 }
