@@ -163,6 +163,7 @@ button:hover{
 		grid-template-columns: 100%;
 		width: auto;
 		background-image: url(./images/bg-main-mobile.png);
+		background-attachment: local;
 		background-size:contain;
 		align-items: start;
 		justify-content: center;
