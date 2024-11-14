@@ -26,7 +26,7 @@
 	background-color: var(--white);
 	background-image: url(./images/bg-main-desktop.png);
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background-attachment: local;
 	color: var(--light-grayish-violet);
 }
 
@@ -163,7 +163,6 @@ button:hover{
 		grid-template-columns: 100%;
 		width: auto;
 		background-image: url(./images/bg-main-mobile.png);
-		background-attachment: local;
 		background-size:contain;
 		align-items: start;
 		justify-content: center;
