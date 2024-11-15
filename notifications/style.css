@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root{
+	--White: hsl(0, 0%, 100%);
+	--Verylight-grayish-blue: hsl(210, 60%, 98%);
+	--Light-grayish-blue-1: hsl(211, 68%, 94%);
+	--Light-grayish-blue-2: hsl(205, 33%, 90%);
+	--Grayish-blue: hsl(219, 14%, 63%);
+	--Dark-grayish-blue: hsl(219, 12%, 42%);
+	--Very-dark-blue: hsl(224, 21%, 14%);
+
+	--Linear-gradient: hsl(249, 99%, 64%);
+	--Linear-gradient-active:  hsl(278, 94%, 30%);
+	--Red: hsl(0, 100%, 66%);
+}
+
+body{
+	font-size: 16px;
+	font-family: 'Plus Jakarta Sans';
+	width: 1440px;
+	height: 960px;
+}
+
+
+
+
