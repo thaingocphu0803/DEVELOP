@@ -12,6 +12,7 @@
 	--Linear-gradient: hsl(249, 99%, 64%);
 	--Linear-gradient-active:  hsl(278, 94%, 30%);
 	--Red: hsl(0, 100%, 66%);
+	--Blue: hsl(219, 85%, 26%)
 }
 
 body{
@@ -19,7 +20,120 @@ body{
 	font-family: 'Plus Jakarta Sans';
 	width: 1440px;
 	height: 960px;
+	background-color: var(--Verylight-grayish-blue);
 }
+
+*{
+	box-sizing: border-box;
+}
+
+#container{
+	width: 70vw;
+	height: 80vh;
+	display: grid;
+	grid-template-rows: auto;
+	padding: 2em;
+	overflow: auto;
+	background-color: var(--White);
+	box-shadow: 11px 14px 45px -21px var(--light-grayish-blue-2);
+	border-radius: 20px;
+	gap: 1em;
+	color: var(--Dark-grayish-blue);
+}
+
+img{
+	width: 45px;
+	height: 45px;
+	justify-self: center;
+}
+
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.noti{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.card{
+	display: grid;
+	grid-template-columns: 1fr 10fr 1fr;
+	
+}
+p{
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+#comment {
+	border: 1px solid var(--Light-grayish-blue-2);
+	padding: 1em;
+	color: var(--Dark-grayish-blue);
+	border-radius: 5px;
+}
+
+#comment:hover {
+	background-color: var(--Verylight-grayish-blue);
+}
+
+.time{
+	color: var(--Grayish-blue);
+}
+
+.name {
+	color: var(--Very-dark-blue);
+	font-weight: 800;
+}
+
+.club{
+	color: var(--Blue);
+	font-weight: 800;
+}
+
+ b:hover, #mark_read:hover  {
+	color: var(--Linear-gradient);
+ }
+
+ #amount{
+	color: var(--White);
+	background-color: var(--Blue);
+	font-size: 16px;
+	padding: 0 10px;
+	border-radius: 5px;
+	align-self: center;
+ }
+
+ .un-read{
+	margin-right: auto;
+	position: relative; 
+ }
+
+ .un-read::after{
+	content: '';
+	background-color: var(--Red);
+	border-radius: 50%;
+	font-size: 16px;
+	width: 8px;
+	height: 8px;
+	z-index: 1;
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 6px;
+
+ }
+
+ .new{
+	background-color: var(--Verylight-grayish-blue);
+ }
+ h2{
+	color: var(--Dark-grayish-blue);
+	font-weight: 800;
+ }
 
 
 
